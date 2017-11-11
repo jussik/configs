@@ -6,14 +6,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " vundle plugins here
-Plugin 'mattn/emmet-vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'racer-rust/vim-racer'
+"Plugin 'mattn/emmet-vim'
+"Plugin 'rust-lang/rust.vim'
+"Plugin 'racer-rust/vim-racer'
 Plugin 'bling/vim-airline'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'jpo/vim-railscasts-theme'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
@@ -42,7 +43,7 @@ set ttimeoutlen=50
 
 set background=dark
 colorscheme railscasts
-set guifont=Terminus\ 9
+"set guifont=Terminus\ 9
 
 " delete buffer without closing split with <C-c>
 noremap <C-c> :bp\|bd #<CR>
@@ -61,9 +62,9 @@ autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul
 
 " vim-racer config
-set hidden
-let g:racer_cmd="/home/jk/lib/racer/target/release/racer"
-let $RUST_SRC_PATH="/home/jk/lib/rust/src/"
+"set hidden
+"let g:racer_cmd="/home/jk/lib/racer/target/release/racer"
+"let $RUST_SRC_PATH="/home/jk/lib/rust/src/"
 
 " vim-airline config
 set laststatus=2
@@ -88,11 +89,11 @@ let g:airline_symbols.linenr = ''
 set previewheight=20
 
 " resize terminal
-if !exists("old_lines")
-    let old_lines=&lines
-    let old_columns=&columns
-    set lines=74 columns=263
+"if !exists("old_lines")
+"    let old_lines=&lines
+"    let old_columns=&columns
+"    set lines=74 columns=263
 
-    au VimLeave * let &lines=old_lines
-    au VimLeave * let &columns=old_columns
-endif
+"    au VimLeave * let &lines=old_lines
+"    au VimLeave * let &columns=old_columns
+"endif
